@@ -12,6 +12,7 @@
     color: #F9FAFB;
     margin: 0 20px;
     align-items: center;
+    font-family: inter;
   
     
 
@@ -22,6 +23,7 @@
     align-items: center;
     margin: 0 20px;
     color: #F9FAFB;
+    font-family: inter;
 }
 .korzina{
     padding-left: 10px;
@@ -31,5 +33,47 @@
     border-radius: 50px;
     width: 88px;
     height: 48px;
+    font-family: inter;
+    
+}
+
+.bar-menu{
+    height: 48px;
+    background-color: #F0BA4E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 240px;
+    font-family: inter;
+}
+
+.bar-left{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: inter;
+}
+.imgBar{
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.bar-right{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    color: #FFFFFF;
+    font-family: inter;
+}
+.inp{
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    width: 300px;
+    align-items: center;
+    background: url(/assets/Search.svg) no-repeat center right;
     
 }
