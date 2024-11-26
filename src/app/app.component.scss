@@ -1,0 +1,35 @@
+.main-header{
+    height: 80px;
+    background-color: #4B565E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 240px;
+    
+}
+.main-header-left{
+    display: flex;
+    color: #F9FAFB;
+    margin: 0 20px;
+    align-items: center;
+  
+    
+
+}
+
+.main-header-right{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: #F9FAFB;
+}
+.korzina{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #F0BA4E;
+    border-radius: 50px;
+    width: 88px;
+    height: 48px;
+    
+}
