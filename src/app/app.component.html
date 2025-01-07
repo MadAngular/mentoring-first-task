@@ -1,118 +1,399 @@
-<div class="content-container1"> 
-<div class="main-header"> 
-    <div class="main-header-left"> 
-        <img src="/assets/Frame.svg" class="header-left">
-    <nav class='main-header-left'>
-        <div class="main-header-left"> Главная</div>
-        <div class="main-header-left"> О компании</div>
-        <div class="main-header-left"> Каталог </div>
-    </nav>
-    </div>    
-    <div class="main-header-right"> 
-        <div class="main-header-right">
-          <img src="/assets/Phone.svg">   +7 (965) 184-29-29</div>
-        <div class="main-header-right"> <img src="/assets/Heart.svg"> </div>
-        <div class="main-header-right" class="korzina"> <img src="/assets/Korzina.svg">Пусто</div>
+<div class="header">
+    <div class="header-left">
+        <div class="header-logo">
+          <img src="/assets/frame.svg" alt="logo">
+        </div>
+          <nav class="header-nav">
+            <div class="header-nav-item" >{{headerItem1}}</div>
+            <div class="header-nav-item" >{{headerItem2}}</div>
+            <div class="header-nav-item" *ngIf="isShowCatalog">{{headerItem3}}</div>
+          </nav>
+          <button (click)="isShowCatalog = !isShowCatalog"> Скрыть/Показать каталог</button>
+          <button (click)="isUpperCase = !isUpperCase"> Изменить текст</button>
+          
+      </div>
+      <div class="header-right">
+        <div class="header-phone">
+          <button style="background: none; border: none; padding: 0; cursor: pointer;">
+            <img src="/assets/phone.svg" alt="иконка телефона">
+          </button>
+        </div>
+          <div>
+            <button id="textButton">
+              +7 (965) 084-29-29
+          </button>
+          </div>
+          
+          <div>
+            <img src="/assets/Heart.svg" alt="сердечко">
+          </div>
+          <div>
+            <button class="bin">
+              <img src="/assets/Buying.svg" alt="корзина">
+              Пусто
+            </button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="bar">
+    <div class="bar-left">
+        <div class="bar-logo">
+          <img src="/assets/menu.svg" alt="catalogue icon">
+        </div>
+        <nav class="bar-nav">
+          <div class="bar-nav-item" *ngFor="let item of menuItems"> {{item}} </div>
+        </nav>
     </div>
-</div>
-<div class="bar-menu">
-    <div class="bar-left"> 
-        <div class="bar-left" class="imgBar"> <img src="/assets/threeList.svg"> <div class="imgBar"> Каталог</div> </div>
-        <div class="bar-left"> Стройматериалы </div>
-        <div class="bar-left"> Инструменты</div>
-        <div class="bar-left"> Электрика</div>
-        <div class="bar-left"> Интерьер и одежда</div>
-    </div> 
-
-    <div class="bar-right"> 
-        <div class="bar-right"> <input placeholder=" Поиск, например Круг зачистной" class="inp">  </div>
-        <div class="bar-right"><img src="/assets/map.svg" width="14px"> Москва  </div>
-    
-    
+    <div class="bar-right">
+      <input type="text" class="input-with-icon" placeholder="Поиск, например Круг зачистной">
+      <img src="/assets/pin.svg" alt="map-pin">
+      <div class="location">Москва</div>
+      </div>
     </div>
-
-</div>
-<div> <img src='assets/Bro.svg' width="100%"> </div>
-</div>
-
-
-
-
-<div class="content-container"> 
-
-    <div class="information-of-site">
-        <div class="blocks-of-information"> 
-         <img src="/assets/kirpici.svg" class="information-of-site-icon"> 
-             <div class="information-of-site-content">
-             <div class="information-of-site-title">Большой ассортимент</div>
-             <div class="commend-description">
-                 строительных материалов всегда в наличии
-             </div>
-         </div>
-         </div>
-          <div class="blocks-of-information"> 
-         <img src="/assets/car.svg" class="car.icon">
-         <div> 
-         <div> Доставка стройматериалов </div>
-         <div class="commend-description"> в течении четырех часов или в любое удобное время</div>
-         </div>
-         </div>
-         <div class="blocks-of-information"> 
-         <div class="commend-icon-container">
-             <img src="/assets/commend.svg" class="commend-icon" alt="Иконка">
-             <div class="commend-text">
-                 <div class="commend-title">Многоуровневая система</div>
-                 <div class="commend-description">управления качеством по стандарту ISO 9001</div>
-             </div>
-             </div>
-         </div>
- 
-         </div>
-     
-       
- <div class="item-cards"> 
-     <div class="item-cards__pagination">
-         <button class="item-cards__pagination-button">1</button>
-         <button class="item-cards__pagination-button">2</button>
-         <button class="item-cards__pagination-button">3</button>
-         <button class="item-cards__pagination-button">4</button>
-         <button class="item-cards__pagination-button">5</button> 
-     </div>
- 
-         <div class="item-cards__grid"> 
-             <div class="item-cards__grid-left">
-               <div class="item-card__grid-left-text"> Строительный отделочный инструмент </div>
-               <div class="item-card__grid-left-text-action"> Перейти в каталог   <img src="/assets/strelka.png" class="imago"> </div> 
-             </div>
-
-             <div class="item-cards__grid-right">
-                <div class="item-card__grid-right1">
-                    <div class="item-card__grid-right1-text"> Эмали</div>
-                    <div class="item-card__grid-right1-text-action"> Перейти в каталог <img src="/assets/strelka.png" class="imago"></div>
-                </div>
-
-                <div class="item-card__grid-right2">
-                    <div class="item-card__grid-right2-text"> Пены, клеи и герметики</div>
-                    <div class="item-card__grid-right2-text-action"> Перейти в каталог <img src="/assets/strelka.png" class="imago"></div>
-                </div>
-            </div>
+   
+    <button (click)="isShowBanner = !isShowBanner" > Открыть баннер</button>
+    <div *ngIf="!isShowBanner"> <img src="/assets/banner.svg" alt="баннер" style="width: 100%;"> </div>
+  
+    <div class="benefits">
+    <div class="benefits-content">
+      <img src="/assets/assortiment.svg" alt="assortiment">
+      <span style="color: rgba(0, 0, 0, 1);"> Большой ассортимент</span>
+        <span style="color: rgba(60, 60, 59, 1);"> строительных материалов всегда в наличии</span>
+    </div>
+    <div class="benefits-content">
+      <img src="/assets/delivery.svg" alt="delivery">
+      <span style="color: rgba(0, 0, 0, 1);">Доставка стройматериалов</span>
+        <span style="color: rgba(60, 60, 59, 1);"> в течении четырех часов или в любое удобное время</span>
+    </div>
+    <div class="benefits-content">
+      <img src="/assets/best.svg" alt="standart">
+      <span style="color: rgba(60, 60, 59, 1);">Многоуровневая <span style="color: rgba(0, 0, 0, 1);">система управления качеством </span> по стандарту ISO 9001</span>
+    </div>
+    </div>
+    <div class="content-container">
+      <div class="item-cards">
+        <div class= "item-cards_pagination" >
+            <button type="button" class="item-cards_pagination-button active-button" *ngFor="let item of newPages"> {{item}} </button>
             
-             <div class="item-card__grid-right3">
-                <div class="item-card__grid-right33"> 
-                    <div class="item-card__grid-right3-text"> Лакокрасочные материалы </div>
-                    <div class="item-card__grid-right3-text-action"> Перейти в каталог <img src="/assets/strelka.png" class="imago"> </div>
-                
-                </div>
-                <div class="item-card__grid-right4">
-                    <div class="item-card__grid-right44">
-                        <div class="item-card__grid-right4-text"> Розетки и выключатели</div>
-                        <div class="item-card__grid-right4-text-action"> Перейти в каталог <img src="/assets/strelka.png"></div>
-                    </div>
-                </div>
-       
- 
+          </div>
 
-</div>
-</div>
-</div>
-</div>
+
+        <div class="item-cards_grid">
+            <div class="item-cards_grid-left">
+              <div class="item-cards_grid-left-text">
+                Строительный отделочный инструмент
+              </div>
+              <div class="item-cards_grid-left-action">
+                <span style="margin-right: 10px;">Перейти в каталог</span>
+                <a class="item-cards_grid-left-action_link">
+                  <img src="/assets/frame20.svg" alt="Перейти">
+                </a>
+              </div>
+            </div>
+            <div class="item-cards_grid-right">
+              <div class="item-cards_grid-right-block1">
+                <div class="item-cards_grid-right-block-text1">
+                  Эмали
+                </div>
+                <div class="item-cards_grid-right-action">
+                  <span style="margin-right: 10px;">Перейти в каталог</span>
+                  <a class="item-cards_grid-right-action_link">
+                    <img src="/assets/frame20.svg" alt="Перейти">
+                  </a>
+                </div>
+              </div>
+              <div class="item-cards_grid-right-block2">
+                <div class="item-cards_grid-right-block-text2">
+                  Лакокрасочные <br> материалы
+                </div>
+                <div class="item-cards_grid-right-action">
+                  <span style="margin-right: 10px;">Перейти в каталог</span>
+                  <a class="item-cards_grid-right-action_link">
+                    <img src="/assets/frame20.svg" alt="Перейти">
+                  </a>
+                </div>
+              </div>
+              <div class="item-cards_grid-right-block3">
+                <div class="item-cards_grid-right-block-text3">
+                  Пены, клеи и <br> герметики
+                </div>
+                <div class="item-cards_grid-right-action">
+                  <span style="margin-right: 10px;">Перейти в каталог</span>
+                  <a class="item-cards_grid-right-action_link">
+                    <img src="/assets/frame20.svg" alt="Перейти">
+                  </a>
+                </div>
+              </div>
+              <div class="item-cards_grid-right-block4">
+                <div class="item-cards_grid-right-block-text4">
+                  Розетки и выключатели
+                </div>
+                <div class="item-cards_grid-right-action">
+                  <span style="margin-right: 10px;">Перейти в каталог</span>
+                  <a class="item-cards_grid-right-action_link">
+                    <img src="/assets/frame20.svg" alt="Перейти">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <section class="popular">
+      <div class="popular_container">
+        <button type="button" class="popular-arrow-left">
+          <img src="/assets/polygon1.svg" alt="arrow-left">
+        </button>
+        <button type="button" class="popular-arrow-right">
+          <img src="/assets/polygon2.svg" alt="arrow-right">
+        </button>
+        <div class="popular_title-wrapper">
+          <span class="popular_items-text">
+            Популярные товары
+          </span >
+            <a class="popular_items-action-link">Посмотреть все товары</a>
+        </div>
+        <ul class="popular_product-list">
+          <li class="popular_product-card">
+            <div class="infocard-text">
+              <div class="infocard1">
+                <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+                <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+              </div>
+                <div class="infocard2">
+                   <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+                    <h6 style="font-size: 16px;font-weight: 600;text-align: left; margin-top: 0;"> <s>52 руб.</s> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 48 руб.</b></h6>
+                  </div>
+                    <div class="infocard3">
+                      <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+                      <button type="button" class="infocard3-addtocart">-</button>
+                      <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+                      <button type="button" class="infocard3-addtocart">+</button>
+                      <button type="button" class="infocard_tocard-action">В корзину</button>
+                    </div>
+              </div>
+          </li>
+          <li class="popular_product-card">
+            <div class="infocard-text">
+              <div class="infocard1">
+                <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+                <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+              </div>
+            <div class="infocard2">
+                <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+                <h6 style="font-size: 16px;font-weight: 600;text-align: left; margin-top: 0;"> <s>52 руб.</s> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 48 руб.</b></h6>
+            </div>
+            <div class="infocard3">
+      <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+      <button type="button" class="infocard3-addtocart">-</button>
+      <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+      <button type="button" class="infocard3-addtocart">+</button>
+      <button type="button" class="infocard_tocard-action">В корзину</button>
+            </div>
+            </div>
+          </li>
+          <li class="popular_product-card">
+            <div class="infocard-text">
+              <div class="infocard1">
+                <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+                <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+              </div>
+            <div class="infocard2">
+                <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+                <h6 style="font-size: 16px;font-weight: 600;text-align: left; margin-top: 0;"> <s>52 руб.</s> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 48 руб.</b></h6>
+
+            </div>
+            <div class="infocard3">
+      <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+      <button type="button" class="infocard3-addtocart">-</button>
+      <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+      <button type="button" class="infocard3-addtocart">+</button>
+      <button type="button" class="infocard_tocard-action">В корзину</button>
+            </div>
+            </div>
+          </li>
+          <li class="popular_product-card">
+            <div class="infocard-text">
+              <div class="infocard1">
+                <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+                <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+              </div>
+            <div class="infocard2">
+                <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+                <h6> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 52 руб.</b></h6>
+            </div>
+            <div class="infocard3">
+      <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+      <button type="button" class="infocard3-addtocart">-</button>
+      <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+      <button type="button" class="infocard3-addtocart">+</button>
+      <button type="button" class="infocard_tocard-action">В корзину</button>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="catalogue-action">
+    <img style="float: right;" src="/assets/pngwing1.svg" alt="man">
+    <div class="catalogue-text">
+    <h3 style="font-family: Inter;font-size: 28px;font-weight: 500;text-align: left;color: #3C3C3B; padding-top: 28px; padding-left: 28px;">Более 10 000 наименований </h3>
+    <h4 style="font-family: Inter; font-size: 20px; font-weight: 400; text-align: left; color: #A1A0A0; padding-top: 28px; padding-left: 28px;">Инструмент для вашего бизнеса, разнообразных марок</h4>
+    <a style="font-family: Inter;font-size: 18px; font-weight: 600; padding-top: 28px; padding-left: 28px; color: #F0BA4E; text-align: left; margin-top: 20px;">Перейти в каталог</a>
+    </div>
+      </div>
+    </section>
+    <section class="New">
+      <div class="New_container">
+        <button type="button" class="New-arrow-left">
+          <img src="/assets/polygon1.svg" alt="arrow-left">
+        </button>
+        <button type="button" class="New-arrow-right">
+          <img src="/assets/polygon2.svg" alt="arrow-right">
+        </button>
+        <div class="New_title-wrapper">
+          <span class="New_items-text">
+          Новинки
+          </span >
+            <a class="New_items-action-link">Посмотреть все товары</a>
+        </div>
+        <ul class="New_product-list">
+          <li class="popular_product-card">
+            <div class="infocard-text">
+              <div class="infocard1">
+                <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+                <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+              </div>
+                <div class="infocard2">
+                   <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+                   <h6> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 52 руб.</b></h6>
+                  </div>
+                    <div class="infocard3">
+                      <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+                      <button type="button" class="infocard3-addtocart">-</button>
+                      <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+                    <button type="button" class="infocard3-addtocart">+</button>
+                    <button type="button" class="infocard_tocard-action">В корзину</button>
+                  </div>
+            </div>
+        </li>
+        <li class="New_product-card">
+          <div class="infocard-text">
+            <div class="infocard1">
+              <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+              <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+            </div>
+          <div class="infocard2">
+              <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+              <h6> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 52 руб.</b></h6>
+          </div>
+          <div class="infocard3">
+    <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+    <button type="button" class="infocard3-addtocart">-</button>
+    <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+    <button type="button" class="infocard3-addtocart">+</button>
+    <button type="button" class="infocard_tocard-action">В корзину</button>
+          </div>
+          </div>
+        </li>
+        <li class="New_product-card">
+          <div class="infocard-text">
+            <div class="infocard1">
+              <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+              <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+            </div>
+          <div class="infocard2">
+              <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+              <h6> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 52 руб.</b></h6>
+          </div>
+          <div class="infocard3">
+    <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+    <button type="button" class="infocard3-addtocart">-</button>
+    <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+    <button type="button" class="infocard3-addtocart">+</button>
+    <button type="button" class="infocard_tocard-action">В корзину</button>
+          </div>
+          </div>
+        </li>
+        <li class="popular_product-card">
+          <div class="infocard-text">
+            <div class="infocard1">
+              <h4 style="font-size: 20px;font-weight: 600;text-align: left; margin-bottom: 10px;"> Круг зачистной 125х6х22 </h4>
+              <h5 style="font-size: 16px;font-weight: 500; text-align: left;margin: 0">Артикул 00004 </h5>
+            </div>
+              <div class="infocard2">
+                 <h5 style="font-size: 16px;font-weight: 500;text-align: left;color: #A1A0A0;margin-top: 20px; margin-bottom: 5px;">Цена за штуку</h5>
+                 <h6> <b style="font-size: 20px;font-weight: 600;text-align: left;margin-top: 0; margin-bottom: 0;"> 52 руб.</b></h6>
+                </div>
+                  <div class="infocard3">
+                    <h5 style="font-size: 16px;font-weight: 500;text-align: left; margin-top: 0;margin-bottom: 5px;">Количество</h5>
+                    <button type="button" class="infocard3-addtocart">-</button>
+                    <span style="font-family: Inter;font-size: 20px;font-weight: 500;margin-right: 8px;margin-left: 8px;">1</span>
+                    <button type="button" class="infocard3-addtocart">+</button>
+                    <button type="button" class="infocard_tocard-action">В корзину</button>
+                  </div>
+            </div>
+        </li>
+    </ul>
+  </div>
+</section>
+<section class="footer">
+  <div class="footer_container">
+    <div class="container">
+      <div class="footer_container-wrapper">
+    <div class="footer_contacts">
+      <img src="/assets/frame.svg" class="footer_logo" alt="Логотип" width="59px" height="39px">
+        <div class="footer_contacts-wrapper1">
+         <div class="footer_contacts-wrapper">
+           <div class="footer_contacts-icon">
+            <img src="/assets/call_Icon.svg" class="footer _contacts-image">
+            </div>
+              <div class="footer_contacts-content">
+                <span class="footer_contacts-title">Контактный телефон</span>
+                <span class="footer_contacts-phone">+7(812)309-09-344 </span>
+                <span class="footer_contacts-phone">+7(960)84-29-09</span>
+              </div>
+            </div>
+          <div class="footer_contacts-wrapper">
+            <div class="footer_contacts-icon">
+              <img src="/assets/mail_icon.svg" class="footer_contacts-image">
+            </div>
+          <div class="footer_contacts-content">
+            <span class="footer_contacts-title"> Электронная почта</span>
+            <span class="footer_contacts-mail">tustin78.mail.ru</span>
+            <span class="footer_contacts-mail">info.tustin.ru </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="footer_email">
+    <div class="footer_title-wrapper">
+      <h3 class="footer_title"> Остались: вопросы? </h3>
+      <p class="footer_label"> Узнавайте первым о скидках, предложениях и событиях еженедельно в своем почтовом ящике. Отпишитесь в любое время одним щелчком мыши.</p>
+        <form class="footer_form-wrapper">
+          <img src="/assets/mail_icon.svg" class="footer_input-icon">
+          <input type="email" placeholder="Введите свою почту" class="footer_input">
+          <button type="submit" class="footer_email-submit"> Отправить </button>
+        </form>
+        </div>
+      </div>
+    </div>
+     <div class="footer_navigation-wrapper">
+          <nav class="footer_navigation">
+            <span class="footer_navigation-item">Главная</span>
+            <span class="footer_navigation-item">О компании</span>
+            <span class="footer_navigation-item">Каталог</span>
+          </nav>
+          <div class="footer_copyright-wrapper">
+            <div class="footer_socials-icons-wrapper">
+              <img class="footer-socials-wrapper" src="/assets/facebook.svg" alt="Facebook">
+              <img class="footer-socials-wrapper" src="/assets/Youtube.png" alt="Youtube">
+              <img class="footer-socials-wrapper" src="/assets/whatsup.svg" alt="WhatsUp">
+            </div>
+            <span class="footer_copyright">© 2021-2022, EDE</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
