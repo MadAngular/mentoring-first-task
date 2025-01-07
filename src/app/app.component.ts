@@ -4,11 +4,11 @@ import { RouterOutlet } from '@angular/router';
 
 
 
-let menuItems: string[] = ['Главная', 'Стройматериалы', 'Инструменты', 'Электрика', 'Интерьер и одежда'];
+let menuItems = ['Главная', 'Стройматериалы', 'Инструменты', 'Электрика', 'Интерьер и одежда'];
 
 
 
-let upperCaseMenuItems : string[] = menuItems.map(
+let upperCaseMenuItems = menuItems.map(
   (item: string) => {
     return item.toUpperCase();
   }
@@ -40,8 +40,8 @@ export class AppComponent {
  
   changeMenu() {
     this.menuItems = upperCaseMenuItems.map(
-      console.log ( (item : string) => this.isUpperCase ? item.toLowerCase() : item.toUpperCase() ) 
-    ) 
+       (item : string) => this.isUpperCase ? item.toLowerCase() : item.toUpperCase() ) 
+     
     this.isUpperCase = !this.isUpperCase;
     
   }
