@@ -1,4 +1,4 @@
-import { User } from "../../../Interfaces/user.interface";
+import { User } from "../../../../Interfaces/user.interface";
 
 interface UserState {
     users: User[];

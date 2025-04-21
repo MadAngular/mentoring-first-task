@@ -1,5 +1,5 @@
 import { createActionGroup, props } from "@ngrx/store";
-import { User } from "../../../Interfaces/user.interface";
+import { User } from "../../../../Interfaces/user.interface";
 
 
 

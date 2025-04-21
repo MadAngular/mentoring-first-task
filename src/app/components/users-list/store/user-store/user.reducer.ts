@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { User } from "../../../Interfaces/user.interface";
+import { User } from "../../../../Interfaces/user.interface";
 import { UserActions } from "./user.actions";
 
 
