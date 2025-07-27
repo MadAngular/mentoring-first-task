@@ -1,0 +1,10 @@
+
+
+<app-user-form (createUser)="createUser($event)"> </app-user-form>
+<div style="display: flex; flex-wrap: wrap;">
+  <div *ngFor="let item of usersService.usersSubject| async" style="width: 200px; height: 200px; border: 1px solid black; margin: 5px;">
+
+   <app-user-card [user]="item" (deleteUser)="onDelete($event)"> </app-user-card>
+   
+  </div>
+</div>
