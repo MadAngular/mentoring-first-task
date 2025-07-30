@@ -42,4 +42,12 @@ export class UsersListComponent {
       },
     });
   }
+  editUser(user: any) {
+    this.usersService.editUser({
+      ...user,
+      company: {
+        name: user.companyName,
+      },
+    });
+  }
 }
